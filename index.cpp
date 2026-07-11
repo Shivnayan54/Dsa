@@ -323,4 +323,48 @@ int main()
   }
     */
 
+#include<iostream> 
+
+using namespace std; 
+
+int main() 
+{
+
+  int arr[] = {10 , 20 , 30 , 40, 50} ;
+
+  int n = 5; 
   
+  int target = 25; 
+
+  int left = 0; 
+  int right = n-1 ; 
+
+  while(left<=right)
+   {
+    int mid = (left + right ) / 2 ; 
+
+    if( arr [mid] == target )
+     {
+      cout<<"targeted number found: "<<mid ; 
+      return 0; 
+     }
+
+     else if (target > arr[mid])
+     {
+       
+      left = mid +1;   
+
+     } 
+     
+     else 
+     {
+        right = mid - 1; 
+     }
+     
+   }
+
+   cout << left;
+return 0;
+
+
+}
