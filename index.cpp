@@ -1,16 +1,12 @@
-#include<iostream>
-using namespace std;
+#include<iostream> 
+using namespace std; 
 
-void change(int x)
-{
-    x = 100;
+void sayHello() { 
+    cout << "Hello, World!" << endl; 
 }
 
-int main()
-{
-    int a = 10;
-
-    change(a);
-
-    cout << a;
+int main() {
+    sayHello(); 
+    return 0;
 }
+
