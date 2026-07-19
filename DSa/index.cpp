@@ -1,31 +1,31 @@
-#include<iostream> 
-using namespace std; 
+#include<iostream>
+using namespace std;
 
-int main() 
-{
+int main() {
 
-    int arr[5] = {10 , 40 ,20 ,50 ,30};
+    int n = 5; 
 
-    int largest = arr[0];
-    int secondLargest = 0; 
-    for(int i =1 ; i<5 ; i++){ 
+    int arr[n] = {10 , 20 , 30 , 40 , 50}; 
 
-        if( arr[i] > largest ){
-            
-            secondLargest = largest; 
-            largest = arr[i]; 
-            
-        }  else if (arr[i] > secondLargest && arr[i] != largest)
-        {
-            secondLargest = arr[i];
-        }
+    int left = 0; 
+    int right = n-1; 
+
+    while( left < right) {
+
+        swap(arr[left], arr[right]); 
+
+        left++; 
+        right--; 
 
     }
 
-    cout<<"Largest is : " <<largest<<" " << endl ; 
+    cout<<"Reversed Array: ";
 
-    cout<<"The secondLargest is: "<<secondLargest; 
-    
+    for(int i=0; i<5; i++)
+    {
+        cout << arr[i] << " "; 
+    }
 
-    return 0;
+    return 0; 
+
 }
