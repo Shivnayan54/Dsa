@@ -1,30 +1,29 @@
-#include<iostream>
-using namespace std;
+#include<iostream> 
+using namespace std; 
 
-int main() {
+int main() { 
 
-    int n = 5; 
+    int n = 6; 
 
-    int arr[n] = {10 , 20 , 30 , 40 , 50}; 
+    int arr[n] = { 1 , 2 ,3 , 4 , 5 , 6 }; 
 
-    int left = 0; 
-    int right = n-1; 
+    int even = 0; 
+    int odd  = 0; 
 
-    while( left < right) {
+    for(int i =0 ; i<n ; i++) { 
 
-        swap(arr[left], arr[right]); 
+        if(arr[i]%2==0){
+            even++; 
+        }else{
 
-        left++; 
-        right--; 
+            odd++; 
+        }
 
     }
+    
+    cout<<"Total even: "<<even<<endl; 
 
-    cout<<"Reversed Array: ";
-
-    for(int i=0; i<5; i++)
-    {
-        cout << arr[i] << " "; 
-    }
+    cout<<"Total odd: "<<odd <<endl ; 
 
     return 0; 
 
