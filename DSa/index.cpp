@@ -1,30 +1,21 @@
-#include<iostream> 
+#include<iostream>
 using namespace std; 
 
-int main() { 
+int main(){ 
 
-    int n = 6; 
+    int arr[5] = {10 , 20 , 30 , 40 , 50}; 
 
-    int arr[n] = { 1 , 2 ,3 , 4 , 5 , 6 }; 
+    int target = 30 ;
 
-    int even = 0; 
-    int odd  = 0; 
+    for(int i=0; i<5 ; i++){
 
-    for(int i =0 ; i<n ; i++) { 
+        if(arr[i] == target){
 
-        if(arr[i]%2==0){
-            even++; 
-        }else{
+            cout<<"Target found at index: "<<i<<endl;
 
-            odd++; 
         }
 
     }
-    
-    cout<<"Total even: "<<even<<endl; 
-
-    cout<<"Total odd: "<<odd <<endl ; 
 
     return 0; 
-
 }
