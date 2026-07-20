@@ -5,17 +5,21 @@ int main() {
 
     int arr[5] = {10, 20, 20, 30, 20};
 
-    int maxi = arr[0];
+    int target = 30 ; 
+    int occurrences = 0;
 
-    for (int i = 1; i < 5; i++) {
+    for(int i =0 ; i<5 ; i++){ 
 
-        if (arr[i] > maxi) {
-            maxi = arr[i];
+        if( arr[i] == target){
+            cout<<"element exists at index "<<i<<" = "<<target<<endl; 
+            occurrences++;
+        }else {
+            cout<<"element does not exist at index "<<i<<" "<<endl;
+
+        } 
+
         }
-
-    }
-
-    cout << "The maximum element in the array is : " << maxi << endl;
+  
 
     return 0;
 }
