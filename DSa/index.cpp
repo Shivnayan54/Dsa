@@ -5,15 +5,22 @@ int main() {
     
     int arr[7] = {1 , 2 , 3 , 4 , 5 , 6 , 7} ; 
 
-    int n =7; 
+    int n = 7; 
 
-    for(int i =6; i>=2 ; i--){ 
+    int left =2; 
+    int right =6;
+    
+    while(left<right){ 
+        int temp = arr[left]; 
+        arr[left] = arr[right]; 
+        arr[right] = temp; 
 
-        cout<<i ; 
-
-    }    
-
-     return 0; 
-
-
+        left++; 
+        right--;
+    }
+    for(int i=0 ; i<n ; i++){
+        cout<<arr[i]<<" "; 
+    }
+    
+    return 0; 
 }   
