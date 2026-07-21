@@ -3,23 +3,31 @@ using namespace std;
 
 int main() {
 
-    int arr[5] = {10, 20, 20, 30, 20};
+    int n;
+    cout << "Enter array size: ";
+    cin >> n;
 
-    int target = 30 ; 
-    int occurrences = 0;
+    int arr[n];
 
-    for(int i =0 ; i<5 ; i++){ 
+    cout << "Enter array elements: ";
 
-        if( arr[i] == target){
-            cout<<"element exists at index "<<i<<" = "<<target<<endl; 
-            occurrences++;
-        }else {
-            cout<<"element does not exist at index "<<i<<" "<<endl;
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 
-        } 
+    int left = 0;
+    int right = n - 1;
 
+    while(left < right) {
+        
+        if(arr[left] != arr[right]) {
+            cout << "Not a palindrome";
+            return 0;   
         }
-  
 
-    return 0;
+        left++; 
+        right--;
+    }
+
+    cout << "Palindrome";
 }
