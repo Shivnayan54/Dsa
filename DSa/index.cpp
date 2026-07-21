@@ -1,33 +1,28 @@
 #include<iostream>
-using namespace std;
+using namespace std; 
 
-int main() {
+int main() 
+{
 
-    int n;
-    cout << "Enter array size: ";
-    cin >> n;
+    int arr[7] = {1, 0, 2, 0, 3, 0, 4};
 
-    int arr[n];
+    int n = 7; 
 
-    cout << "Enter array elements: ";
+    int index = 0; 
 
-    for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    for(int i=0; i<n ; i++) { 
 
-    int left = 0;
-    int right = n - 1;
+        if(arr[i] != 0 ) {
+          swap(arr[i] , arr[index]) ; 
+          index++ ; 
 
-    while(left < right) {
-        
-        if(arr[left] != arr[right]) {
-            cout << "Not a palindrome";
-            return 0;   
         }
 
-        left++; 
-        right--;
     }
 
-    cout << "Palindrome";
+    for(int i=0 ; i<n ; i++){ 
+        cout<<arr[i] ; 
+    }
+
+    return 0; 
 }
