@@ -1,26 +1,33 @@
-#include<iostream> 
+#include<iostream>
 using namespace std; 
 
 int main() { 
-    
-    int arr[7] = {1 , 2 , 3 , 4 , 5 , 6 , 7} ; 
+ 
+int n = 6; 
 
-    int n = 7; 
+int arr[n] = {1, 2, 3,  6, 5, 4};
 
-    int left =2; 
-    int right =6;
-    
-    while(left<right){ 
-        int temp = arr[left]; 
-        arr[left] = arr[right]; 
-        arr[right] = temp; 
 
-        left++; 
-        right--;
+int target = 4; 
+
+for(int i = 0; i < n; i++) {
+
+    int left= 0; 
+    int right = n-1; 
+
+    int mid = (left + right) / 2; 
+
+    if(arr[i] == target) {
+        cout << "Element found at index: " << i << endl;
+        return 0; 
+    } else if(target > arr[mid]) {
+        left = mid + 1; 
+    } else {
+        right = mid - 1; 
     }
-    for(int i=0 ; i<n ; i++){
-        cout<<arr[i]<<" "; 
-    }
-    
-    return 0; 
-}   
+
+}
+
+return 0; 
+
+}
