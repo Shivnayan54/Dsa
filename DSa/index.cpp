@@ -10,15 +10,15 @@ int arr[n] = {1, 2, 3,  6, 5, 4};
 
 int target = 4; 
 
-for(int i = 0; i < n; i++) {
+int left = 0;
+int right = n - 1;
 
-    int left= 0; 
-    int right = n-1; 
+while(left <= right) {
 
     int mid = (left + right) / 2; 
 
-    if(arr[i] == target) {
-        cout << "Element found at index: " << i << endl;
+    if(arr[mid] == target) {
+        cout << "Element found at index: " << mid << endl;
         return 0; 
     } else if(target > arr[mid]) {
         left = mid + 1; 
