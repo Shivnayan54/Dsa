@@ -1,26 +1,36 @@
 #include<iostream>
 using namespace std; 
 
-int main() 
-{
+int main() { 
 
-    int arr[10] = {1 , 3, 4 , 5}; 
-    
-    int n = 4; 
+    int arr[] = {1, 2, 2, 2, 3, 4, 5}; 
+    int n = sizeof(arr) / sizeof(arr[0]); 
 
     int target = 2; 
-    int pos = 1; 
 
-    for(int i = n; i>pos ; i--)
-    {
-       arr[i] = arr[i-1]; 
-    }
-    
-    arr[pos] = target;
-    n++; 
+    int left = 0; 
+    int right = n-1; 
 
-    for(int i=0; i<n ;i++){ 
-        cout<< arr[i]<<" "; 
+    int ans = -1; 
+
+    while (left <= right){ 
+
+        int mid = left + (right - left ) / 2; 
+
+        if(arr[mid] == target){ 
+            ans = mid; 
+            right = mid-1; 
+        }
+        else if(arr[mid] < target){ 
+            left = mid+1; 
+        }else {
+            right = mid- 1; 
+        }
     }
+    if(ans != -1) 
+    cout<<"First Occurrence is at index: " << ans; 
+    else
+    cout<<"Element not found"; 
+
     return 0; 
 }
