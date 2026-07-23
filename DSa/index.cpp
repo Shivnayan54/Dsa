@@ -3,12 +3,8 @@ using namespace std;
 
 int main() { 
 
-   int  sum = 0; 
-
-    for(int i=0; i<10; i++){ 
-        sum += i; 
+    for(int i = 2; i<=20; i+=2) {
+        cout<<i<<endl; 
     }
-
-    cout<<"the sum of all natural numbers are: "<<sum ; 
    return 0;
 }
