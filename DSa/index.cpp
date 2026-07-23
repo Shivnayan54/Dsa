@@ -1,36 +1,38 @@
 #include<iostream>
-using namespace std; 
+using namespace std;
 
-int main() { 
- 
-int n = 6; 
+int main() {
 
-int arr[n] = {1,  3,  6, 5, 4};
+    int arr[] = {1, 3, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
+    int target;
+    cout << "Enter the target element: ";
+    cin >> target;
 
-int target = 2; 
+    int left = 0;
+    int right = n - 1;
 
-int left = 0;
-int right = n - 1;
+    while(left <= right) {
 
-while(left <= right) {
+        int mid = left + (right - left) / 2;
 
-    int mid = (left + right) / 2; 
+        if(arr[mid] == target) {
+            cout << "Target found at index: " << mid << endl;
+            return 0;
+        }
 
-    if(arr[mid] == target){
-        cout<<"element found at index: " <<mid ; 
-        return 0; 
+        else if(target > arr[mid]) {
+            left = mid + 1;
+        }
+
+        else {
+            right = mid - 1;
+        }
     }
-    else if(target > arr[mid]){
-        left = mid+1; 
 
-    }else {
-        right = mid -1 ; 
-    }
+    // If target is not found
+    cout << "Insert Position: " << left << endl;
 
-}   
-
-cout<< "Element Not found"; 
-return 0; 
-
-}  
+    return 0;
+}
