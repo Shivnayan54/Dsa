@@ -1,18 +1,29 @@
-#include<iostream>
-using namespace std; 
+#include<iostream> 
+using namespace std;  
+ 
+void swapNumbers(int &a , int &b) { 
 
-int maximum( int a , int b){ 
+    int temp = a; 
+    a = b; 
+    b = temp ; 
 
-    if( a>b ){
-        return a; 
-    }else{
-        return b;
-    }
 }
 
-int main(){ 
+int main() { 
 
-    int x = maximum ( 10 , 5); 
+    int x = 10;     
+    int y = 20;     
 
-    cout<<x ; 
-} 
+    cout<< "Before Swapping:" << endl;  
+    cout<< "x = " << x <<endl;  
+    cout<< "y = " << y <<endl;  
+
+    swapNumbers(x, y);  
+
+    cout<< "\nAfter Swapping:"<< endl; 
+    cout<< "x= " << x << endl; 
+    cout<< "y = "<< y << endl; 
+
+    return 0; 
+
+}                                                                                       
