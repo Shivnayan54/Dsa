@@ -1,15 +1,18 @@
 #include<iostream>
 using namespace std; 
 
-int sum( int a , int b) {
+int maximum( int a , int b){ 
 
-   return a+b; 
+    if( a>b ){
+        return a; 
+    }else{
+        return b;
+    }
 }
 
-int main(){
+int main(){ 
 
-    int x = sum(10 , 20); 
-    cout<< x; 
+    int x = maximum ( 10 , 5); 
 
-   
-}
+    cout<<x ; 
+} 
