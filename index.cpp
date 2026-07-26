@@ -14,7 +14,7 @@ int main() {
     {
         int mid = left + (right - left) / 2; 
 
-        if(arr[mid] >= target)
+        if(arr[mid] > target)
         {
             ans = mid; 
             right = mid-1;
